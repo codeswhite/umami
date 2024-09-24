@@ -10,7 +10,7 @@ BigInt.prototype['toJSON'] = function () {
   return Number(this);
 };
 
-export function getDatabaseType(url = process.env.DATABASE_URL) {
+export function getDatabaseType(url = process.env.VERCEL_POSTGRES_PRISMA_URL) {
   const type = url && url.split(':')[0];
 
   if (type === 'postgres') {

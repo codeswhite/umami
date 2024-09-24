@@ -4,7 +4,7 @@ const fse = require('fs-extra');
 const path = require('path');
 const del = require('del');
 
-function getDatabaseType(url = process.env.DATABASE_URL) {
+function getDatabaseType(url = process.env.VERCEL_POSTGRES_PRISMA_URL) {
   const type = process.env.DATABASE_TYPE || (url && url.split(':')[0]);
 
   if (type === 'postgres') {

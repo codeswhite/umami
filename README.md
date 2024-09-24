@@ -57,7 +57,7 @@ yarn install
 Create an `.env` file with the following:
 
 ```bash
-DATABASE_URL=connection-url
+VERCEL_POSTGRES_PRISMA_URL=connection-url
 ```
 
 The connection URL format:

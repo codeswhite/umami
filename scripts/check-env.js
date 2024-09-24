@@ -19,7 +19,7 @@ function checkMissing(vars) {
 }
 
 if (!process.env.SKIP_DB_CHECK && !process.env.DATABASE_TYPE) {
-  checkMissing(['DATABASE_URL']);
+  checkMissing(['VERCEL_POSTGRES_PRISMA_URL']);
 }
 
 if (process.env.CLOUD_MODE) {

@@ -3,7 +3,7 @@ import { hash } from 'next-basics';
 import { v4, v5 } from 'uuid';
 
 export function secret() {
-  return hash(process.env.APP_SECRET || process.env.DATABASE_URL);
+  return hash(process.env.APP_SECRET || process.env.VERCEL_POSTGRES_PRISMA_URL);
 }
 
 export function salt() {
